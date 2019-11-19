@@ -1,4 +1,5 @@
 @import "_variables.scss";
+// @import "_taxi.scss";
 
 html, body {
     overflow-x: hidden;
@@ -23,7 +24,7 @@ a {
     margin: 0 15vw;
 }
 
-.navbar {
+.navbar-horizontal {
     position: sticky;
     display: flex;
     top: 0;
@@ -49,11 +50,86 @@ a {
         }
     }
 
+    .navbar-buttons-vertical {
+        display: flex;
+        flex-direction: column;
+    }
+
     .navbar-email {
         margin: auto 0px auto auto;
     }
 }
 
+.navbar-vertical {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    background-color: #ffffff;
+    align-content: center;
+    padding: 0 10vw;
+    z-index: 1;
+
+    .navbar-burger-container {
+        display: flex;
+
+        .navbar-burger {
+            padding: 1.25em;
+            text-decoration: none;
+            color: black;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 6px 6px rgba(220, 220, 220, 0) inset;
+            transition: box-shadow 0.3s ease-in-out;
+
+            i {
+                font-size: 30px;
+            }
+        }
+
+        .navbar-burger:hover {
+            box-shadow: 0px 0px 6px 6px rgba(220, 220, 220, 1) inset;
+            cursor: pointer;
+        }
+    }
+
+    .navbar-buttons-container {
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+        transform: scaleY(0);
+        transform-origin: top center;
+
+        .navbar-buttons {
+            display: flex;
+            padding: 0 10vw;
+            flex-direction: column;
+
+            .navbar-button {
+                padding: 1.25em;
+                text-decoration: none;
+                color: black;
+                background-color: #ffffff;
+                box-shadow: 0px 0px 6px 6px rgba(220, 220, 220, 0) inset;
+                transition: box-shadow 0.3s ease-in-out;
+            }
+    
+            .navbar-button:hover {
+                box-shadow: 0px 0px 6px 6px rgba(220, 220, 220, 1) inset;
+            }
+        }
+
+        &.active {
+            transform: scaleY(1);
+        }
+    }
+
+    .navbar-email {
+        margin: auto 0px auto auto;
+    }
+}
 
 .home-name {
     font-size: 6em;

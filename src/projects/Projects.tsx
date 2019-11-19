@@ -29,6 +29,22 @@ const Projects: React.FC = () => {
                         </div>
                     </div>
                     <div className="project">
+                        <div className="project-title">Senior Design Project: Cirq - Quantom Computing</div>
+                        <div className="project-description">
+                            <p>
+                                For this project, my team is working on the Cirq quantom computing GitHub repository. Our goal is to learn
+                                quantom computing and commit to multiple issues that they currently have outlined in the repository. My role
+                                is as a lead programmer and the organizer. I plan how the team gets together and what we work on together, similar
+                                to a team leader.
+                            </p>
+                            <p>
+                                I also love to code though so I work on that a lot as well. This project has taught me all about
+                                quantom computing, as well as pushing code to an open-source repository. Our team's big picture contribution for 
+                                the Cirq repositry is to implement 3 qubit gate decomposition.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="project">
                         <div className="project-title">IEEE VR 3DUI Contest 2019</div>
                         <div className="project-subtitle">Team VRAC: A Collaborative Virtual Reality Excape Room with Passive Haptics</div>
                         <br></br>
@@ -97,13 +113,41 @@ const Projects: React.FC = () => {
                     <div className="project">
                         <div className="project-title">Roguelike Dungeon in Terminal</div>
                         <div className="project-description">
-                            This is where I will talk about Com Sci 327.
+                            During the fall semester of 2017, I took Com Sci 327 at Iowa State University. This course 
+                            covered object-oriented programming using C and C++. The main topics of covered were memory 
+                            management, parameter passing, inheritance, compiling, debugging, and maintaining programs. 
+                            Each of the topics were covered over weekly coding assignments. The coding assignments were 
+                            built on each other and by the end of the semester, we had created a full terminal based 
+                            roguelike dungeon game. 
                         </div>
                     </div>
                     <div className="project">
                         <div className="project-title">Dungeons and Dragons Map Builder</div>
                         <div className="project-description">
-                            This is where I will talk about Prizm Labs.
+                            <p>
+                                After my freshman year of college, I was given the opportunity to work a startup based 
+                                in San Fransisco called Play Table. Play Table was a hardware company creating a board 
+                                game console. Over the summer, my job was to create demo software to show off the 
+                                hardware they had produced.
+                            </p>
+                            <p>
+                                My main project for the summer at Play Table was a Dungeons and Dragons Map Builder for
+                                the hardware. I used the Unity game engine with C# to create a tile based creation
+                                application. The applicaiton was also able to use physical objects with the virtual display,
+                                creating a wholesome DnD experience.
+                            </p>
+                            <p>
+                                While at Play Table, I was also given the chance to present at the 2016 E3 expo. At E3,
+                                I learned a lot about where the industry was as got the chance to help Play Table present
+                                to thousands of E3 attendants.
+                            </p>
+                            <p>
+                                My favorite project for Play Table, however, was porting Deep Sea Adventures to the device.
+                                Deep Sea Adventures was a multiplayer dice roling treasure hunt board game. It was fun to
+                                create because I was able to create unique ways to control the experience. Since it was
+                                only a demo application, I abstracted some of the logic and gave the users more control
+                                over the environment. This project was my favorite because of the unique solution I created.
+                            </p>
                         </div>
                     </div>
                 </div>
