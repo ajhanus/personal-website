@@ -2,10 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 export interface iNavbarProps {
-}
-
-export interface iNavbarState {
-    horizontal: boolean;
+    mobile: boolean;
 }
 
 export interface iNavbarButtonProps {
@@ -18,36 +15,15 @@ export interface iNavbarButtonPDFProps {
     pdf: string;
 }
 
-export class Navbar extends React.Component<iNavbarProps,iNavbarState> {
-    constructor(props: iNavbarProps) {
-        super(props);
-        this.state = {
-            horizontal: window.innerWidth > 1300
-        }
-    }
-
-    componentDidMount() {
-        window.addEventListener('resize', this.updateDimensions);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateDimensions);
-    }
-
-    updateDimensions = () => {
-        this.setState({ 
-            horizontal: window.innerWidth > 1300
-        });
-    };
-
+export class Navbar extends React.Component<iNavbarProps, {}> {
     render() {
-        if (this.state.horizontal) {
+        if (this.props.mobile) {
             return (
-                <NavbarHorizontal />
+                <NavbarVertical />
             );
         }
         return (
-            <NavbarVertical />
+            <NavbarHorizontal />
         );
     }
 }
@@ -109,7 +85,7 @@ class NavbarVertical extends React.Component<{},iNavbarVerticalState> {
 
 const NavbarButtonPDF = (props: iNavbarButtonPDFProps) => {
     return (
-        <a href={"/pdfs/" + props.pdf} className="navbar-button" target="_blank">{props.title}</a>
+        <a href={"/pdfs/" + props.pdf} className="navbar-button" target="_blank" rel="noopener noreferrer">{props.title}</a>
     )
 }
 

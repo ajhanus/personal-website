@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
-import Home from './home/Home';
+import { Home } from './home/Home';
 import Projects from './projects/Projects';
 import * as serviceWorker from './serviceWorker';
 

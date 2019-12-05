@@ -6,7 +6,7 @@ import poster from '../images/reu_poster.jpg';
 const Projects: React.FC = () => {
     return (
         <div>
-            <Navbar />
+            <Navbar mobile={false} />
             <div className="container">
                 <div className="container-margins">
                     <div className="project">
@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
                         <br></br>
                         <br></br>
                         <div className="iframe-box">
-                            <iframe src="https://calchub.co/embed/80b88092" className="iframe-item" />
+                            <iframe src="https://calchub.co/embed/80b88092" className="iframe-item" title="CalcHub Calc" />
                         </div>
                     </div>
                     <div className="project">
@@ -70,12 +70,12 @@ const Projects: React.FC = () => {
                             </p>
                             <p>
                                 Our submission video can be seen below and our paper can be found in the conference preceedings 
-                                <a href="https://ieeexplore.ieee.org/xpl/conhome.jsp?punumber=1000791" target="_blank"> here</a>.
+                                <a href="https://ieeexplore.ieee.org/xpl/conhome.jsp?punumber=1000791" target="_blank" rel="noopener noreferrer"> here</a>.
                             </p>
                         </div>
                         <br></br>
                         <div className="iframe-box">
-                            <iframe src="https://www.youtube.com/embed/qwyVEyEUxEA" className="iframe-item" />
+                            <iframe src="https://www.youtube.com/embed/qwyVEyEUxEA" className="iframe-item" title="IEEE Video" />
                         </div>
                     </div>
                     <div className="project">
@@ -93,10 +93,10 @@ const Projects: React.FC = () => {
                                 Over the summer, I worked on a Data Visualization website that would help teach marginalized
                                 populations different indoor climate control topics. In four weeks, we created a React website with
                                 different graphics to display the indoor climate of a person's home. We also wrote a paper over our
-                                work and it can be seen <a href="/pdfs/reu_paper.pdf" target="_blank">here</a>.
+                                work and it can be seen <a href="/pdfs/reu_paper.pdf" target="_blank" rel="noopener noreferrer">here</a>.
                             </p>
                         </div>
-                        <img className="spire-poster" src={ poster } />
+                        <img className="spire-poster" src={ poster } alt="Spire REU" />
                     </div>
                     <div className="project">
                         <div className="project-title">Pocket Closet</div>

@@ -1,0 +1,171 @@
+.taxi-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .taxi-display-wrapper{
+        width: 500px;
+
+        .taxi-display {
+            position: relative;
+            max-width: 500px;
+            height: 500px;
+    
+            .background {
+                z-index: -1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        
+            .taxi-board {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+        
+                .board-row {
+                    display: flex;
+                }
+        
+                .road-tile {
+                    width: 20%;
+                    height: 20%;
+                }
+        
+                .taxi {
+                    position: absolute;
+                    z-index: 1;
+                    width: 20%;
+                    height: 20%;
+                }
+        
+                .pickup {
+                    position: absolute;
+                    z-index: 1;
+                    width: 20%;
+                    height: 20%;
+                }
+        
+                .dropoff {
+                    position: absolute;
+                    z-index: 1;
+                    width: 20%;
+                    height: 20%;
+                }
+            }
+        }
+    }
+    .taxi-controls {
+        margin-left: 1rem;
+        .title {
+            padding-bottom: 1rem;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .key-row {
+            max-width: 225px;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.taxi-wrapper-mobile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .taxi-display-wrapper{
+        max-width: 500px;
+
+        .taxi-display {
+            position: relative;
+            max-width: 500px;
+            padding-top: 100%;
+
+            .background {
+                z-index: -1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+            }
+        
+            .taxi-board {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+        
+                .board-row {
+                    display: flex;
+                }
+        
+                .road-tile {
+                    width: 20%;
+                    height: 20%;
+                }
+        
+                .taxi {
+                    position: absolute;
+                    z-index: 1;
+                    width: 20%;
+                    height: 20%;
+                }
+        
+                .pickup {
+                    position: absolute;
+                    z-index: 1;
+                    width: 20%;
+                    height: 20%;
+                }
+        
+                .dropoff {
+                    position: absolute;
+                    z-index: 1;
+                    width: 20%;
+                    height: 20%;
+                }
+            }
+        }
+    }
+
+    .taxi-controls {
+        margin-top: 1rem;
+        .title {
+            padding-bottom: 1rem;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .key-row {
+            max-width: 225px;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .button-holder {
+        display: flex;
+        margin-top: 1rem;
+
+        .random-state-button {
+            padding: 0.5em;
+            border: solid black 1px;
+    
+            &:active {
+                background-color: #EFEFEF;
+            }
+    
+        }
+    }
+}
