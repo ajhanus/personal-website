@@ -19,10 +19,11 @@
   },
   "scripts": {
     "start": "PORT=3001 react-scripts start",
-    "build": "react-scripts build",
-    "deploy": "aws s3 sync build/ s3://ajhanus.com",
+    "build": "react-scripts --max_old_space_size=4096 build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && aws s3 sync build/ s3://ajhanus.com --delete && npm run-script invalidate-cache:live",
+    "invalidate-cache:live": "aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id E3LNMIIXBK1KK5 --paths '/*'"
   },
   "eslintConfig": {
     "extends": "react-app"

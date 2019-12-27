@@ -219,7 +219,7 @@ export class TaxiWrapper extends React.Component<iTaxiWrapperProps, iTaxiWrapper
 
         return (
             <div className={taxiWrapperStyle}>
-                { this.props.mobile ? <div className="home-score">Score: {this.state.score}</div> : null }
+                { this.props.mobile ? <div className="taxi-score">Score: {this.state.score}</div> : null }
                 <div className="taxi-display-wrapper">
                     <div className="taxi-display">
                         <img
@@ -238,9 +238,9 @@ export class TaxiWrapper extends React.Component<iTaxiWrapperProps, iTaxiWrapper
                     </div>
                 </div>
                 <div className="taxi-controls">
-                    { this.props.mobile ? null : <div className="home-score">Score: {this.state.score}</div> }
+                    { this.props.mobile ? null : <div className="taxi-score">Score: {this.state.score}</div> }
                     <div className="title">Controls:</div>
-                    <div>
+                    <div className="key-row-wrapper">
                         <div className="key-row">
                             <img
                                 src={process.env.PUBLIC_URL + '/images/keys/' + q_image}
@@ -282,15 +282,13 @@ export class TaxiWrapper extends React.Component<iTaxiWrapperProps, iTaxiWrapper
                             <img
                                 src={process.env.PUBLIC_URL + '/images/keys/' + d_image}
                                 onClick={this.actionRight}
-                                onPointerDown={() => { this.setState({ keydown: "E" }) }}
+                                onPointerDown={() => { this.setState({ keydown: "D" }) }}
                                 onPointerUp={() => { this.setState({ keydown: "" }) }}
                                 alt="D key"
                             />
                         </div>
-                        <div className="button-holder">
-                            <div className="random-state-button" onClick={this.setRandomState}>New Random State</div>
-                        </div>
                     </div>
+                    <div className="random-state-button" onClick={this.setRandomState}>New Random State</div>
                 </div>
             </div>
         )

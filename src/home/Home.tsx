@@ -69,9 +69,9 @@ export class Home extends React.Component<{}, iHomeState> {
                             or west. However, I introduced the idea of turning left or right and only being able to move forward. The
                             location of the pickup and dropoff location is also not fixed. This resulted in 62500 unique states which is
                             much higher then the original taxi environment. <br /><br /> There are multiple ways you can play with the environment
-                            below. You can manually move the taxi with your keyboard (controls are below). You can also press S or the Down arrow
-                            key to use the trained agent to move the taxi. Below the board, you can choose between three different agents.
-                            When you click on them, a paragraph explains how they were trained.
+                            below. You can manually move the taxi with the buttons below or your keyboard. You can also press S or the Down arrow
+                            key to use the trained agent to move the taxi. {/* Below the board, you can choose between three different agents.
+                            When you click on them, a paragraph explains how they were trained. */}
                         </div>
                         <TaxiWrapper mobile={this.state.mobile} />
                     </section>

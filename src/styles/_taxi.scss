@@ -3,6 +3,13 @@
     display: flex;
     justify-content: center;
 
+    .taxi-score {
+        margin: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+
     .taxi-display-wrapper{
         width: 500px;
 
@@ -58,19 +65,30 @@
             }
         }
     }
+
     .taxi-controls {
         margin-left: 1rem;
+
         .title {
+            margin: 0.5rem;
             padding-bottom: 1rem;
             font-weight: bold;
             font-size: 2rem;
         }
 
-        .key-row {
-            max-width: 225px;
-            height: 80px;
-            display: flex;
-            justify-content: space-between;
+        .key-row-wrapper {
+            margin: 0.5rem;
+
+            .key-row {
+                max-width: 225px;
+                height: 80px;
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .random-state-button {
+                margin: 0.5rem;
+            }
         }
     }
 }
@@ -80,6 +98,13 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    .taxi-score {
+        margin: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
 
     .taxi-display-wrapper{
         max-width: 500px;
@@ -140,32 +165,37 @@
 
     .taxi-controls {
         margin-top: 1rem;
+        display: flex;
+        flex-flow: wrap;
+
         .title {
-            padding-bottom: 1rem;
+            margin: 0.5rem;
             font-weight: bold;
             font-size: 2rem;
         }
 
-        .key-row {
-            max-width: 225px;
-            height: 80px;
-            display: flex;
-            justify-content: space-between;
+        .key-row-wrapper{
+            margin: 0.5rem;
+
+            .key-row {
+                max-width: 225px;
+                height: 80px;
+                display: flex;
+                justify-content: space-between;
+            }
         }
     }
+}
 
-    .button-holder {
-        display: flex;
-        margin-top: 1rem;
+.random-state-button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5em;
+    height: fit-content;
+    border: solid #1F1F1F 1px;
+    cursor: pointer;
 
-        .random-state-button {
-            padding: 0.5em;
-            border: solid black 1px;
-    
-            &:active {
-                background-color: #EFEFEF;
-            }
-    
-        }
+    &:active {
+        background-color: #EFEFEF;
     }
 }
