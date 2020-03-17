@@ -33,7 +33,7 @@ export class Home extends React.Component<{}, iHomeState> {
     render() {
         return (
             <div className="container">
-                <div className="home-name">AJ Hanus</div>
+                { !this.state.mobile && <div className="home-name">AJ Hanus</div> }
                 <Navbar mobile={this.state.mobile} />
                 <div className="profile-header">
                     <div className="profile-bio">

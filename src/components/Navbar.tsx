@@ -34,7 +34,6 @@ const NavbarHorizontal = () => {
             <div className="navbar-buttons">
                 <NavbarButton title="Home" destination="/" />
                 <NavbarButton title="Projects" destination="/projects" />
-                <NavbarButton title="Memory" destination="/memory" />
                 <NavbarButtonPDF title="Resume" pdf="resume.pdf" />
             </div>
             <div className="navbar-email">hanusaj@gmail.com</div>
@@ -43,40 +42,61 @@ const NavbarHorizontal = () => {
 }
 
 interface iNavbarVerticalState {
-    visible: boolean;
+    navVisible: boolean;
+    userVisible: boolean;
 }
 
 class NavbarVertical extends React.Component<{},iNavbarVerticalState> {
     constructor(props: any) {
         super(props);
         this.state = {
-            visible: false
+            navVisible: false,
+            userVisible: false
         }
     }
 
     onClickBurger = () => {
         this.setState((prevState, props) => {
             return { 
-                visible: !prevState.visible
+                navVisible: !prevState.navVisible,
+                userVisible: false
+            }
+        });
+    }
+
+    onClickName = () => {
+        this.setState((prevState, props) => {
+            return { 
+                navVisible: false,
+                userVisible: !prevState.userVisible
             }
         });
     }
 
     render() {
-        const active = this.state.visible ? " active" : "";
+        const navActive = this.state.navVisible ? " active" : "";
+        const userActive = this.state.userVisible ? " active" : "";
         return (
             <div className="navbar-vertical">
                 <div className="navbar-burger-container">
                     <div className="navbar-burger" onClick={this.onClickBurger}>
                         <i className="fa fa-bars"></i>
                     </div>
-                    <div className="navbar-email">hanusaj@gmail.com</div>
+                    <div className="navbar-name" onClick={this.onClickName}>
+                        AJ Hanus
+                        { userActive ? <i className="fa fa-angle-down"></i> : <i className="fa fa-angle-up"></i> }
+                    </div>
                 </div>
-                <div className={"navbar-buttons-container" + active}>
+                <div className={"name-info-container" + userActive}>
+                    <div className="name-info">
+                        <div>hanusaj@gmail.com</div>
+                        <div>(641) 355 - 3039</div>
+                    </div>
+                </div>
+                <div className={"navbar-buttons-container" + navActive}>
                     <div className="navbar-buttons">
                         <NavbarButton title="Home" destination="/" />
                         <NavbarButton title="Projects" destination="/projects" />
-                        <NavbarButton title="Memory" destination="/memory" />
                         <NavbarButtonPDF title="Resume" pdf="resume.pdf" />
                     </div>
                 </div>

@@ -91,6 +91,31 @@ a {
             cursor: pointer;
         }
     }
+    .name-info-container {
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+        transform: scaleY(0);
+        transform-origin: top center;
+
+        .name-info {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                margin: 0 auto;
+                padding: 0.5em 0;
+                text-align: center;
+            }
+        }
+
+        &.active {
+            transform: scaleY(1);
+        }
+    }
 
     .navbar-buttons-container {
         top: 100%;
@@ -126,8 +151,14 @@ a {
         }
     }
 
-    .navbar-email {
+    .navbar-name {
+        font-size: 1.5em;
+        color: $primaryColor0;
         margin: auto 0px auto auto;
+
+        i {
+            margin-left: 0.5em;
+        }
     }
 }
 
