@@ -5,11 +5,13 @@ import './index.css';
 import { Home } from './home/Home';
 import Projects from './projects/Projects';
 import * as serviceWorker from './serviceWorker';
+import { Memory } from './memory/Memory';
 
 const routing = (
     <Router>
         <div>
             <Route exact path="/" component={ Home } />
+            <Route path="/memory" component= { Memory } />
             <Route path="/projects" component={ Projects } />
         </div>
     </Router>

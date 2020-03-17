@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/_style.scss';
 import { Navbar } from '../components/Navbar';
-import { CalchubLink } from '../components/CalchubLink';
 import { SectionTitle } from '../components/SectionTitle';
 import { TaxiWrapper } from '../taxi/TaxiEnvironment';
 
@@ -40,7 +39,7 @@ export class Home extends React.Component<{}, iHomeState> {
                     <div className="profile-bio">
                         <h3>Computer Engineer</h3>
                         <h3>Full Stack Developer</h3>
-                        <h3><CalchubLink white={ true }/> Cofounder</h3>
+                        <h3>In Search of Full Time Position</h3>
                     </div>
                 </div>
                 <div className="container-margins">
@@ -48,12 +47,12 @@ export class Home extends React.Component<{}, iHomeState> {
                         <SectionTitle title="About Me" />
                         <div className="about-me">
                             Hello! My name is AJ Hanus and I am an undergraduate in Computer 
-                            Engineering. I'm currently looking for a full-time job in frontend website development.
-                            However, I am also passionate about artificial intelligence and virtual reality.
+                            Engineering. I am graduating in May and currently searching for a full-time position.
+                            I am passionate about artificial intelligence, virtual reality, web development, and robotics.
                             I am currently a senior and have had various jobs throughout the 
                             software industry. I have worked for a startup in San Francisco, 
-                            Garmin, spent a summer as a research undergrad, and interned for The Boeing Company. I am also a
-                            cofounder of <a href="https://www.calchub.co" target="_blank" rel="noopener noreferrer">Calchub.co</a>. I am a member of Delta Tau Delta 
+                            interned with Garmin in Kansas, spent a summer as a research undergrad at Iowa State University, and interned for Boeing. I am also working on a
+                            side project called <a href="https://www.calchub.co" target="_blank" rel="noopener noreferrer">Calchub.co</a>. I am a member of Delta Tau Delta 
                             fraternity, the Iowa State Sailing Club, and the Out of the Darkness on-campus organization. 
                             In my free time, you'll find me either doing yoga, playing board games, kite boarding,
                             or throwing frisbee. Thanks for reading and feel free to email me at hanusaj@gmail.com.
@@ -70,8 +69,7 @@ export class Home extends React.Component<{}, iHomeState> {
                             location of the pickup and dropoff location is also not fixed. This resulted in 62500 unique states which is
                             much higher then the original taxi environment. <br /><br /> There are multiple ways you can play with the environment
                             below. You can manually move the taxi with the buttons below or your keyboard. You can also press S or the Down arrow
-                            key to use the trained agent to move the taxi. {/* Below the board, you can choose between three different agents.
-                            When you click on them, a paragraph explains how they were trained. */}
+                            key to use the trained agent to move the taxi.
                         </div>
                         <TaxiWrapper mobile={this.state.mobile} />
                     </section>

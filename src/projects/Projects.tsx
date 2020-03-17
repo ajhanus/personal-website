@@ -42,7 +42,7 @@ export class Projects extends React.Component<{}, iProjectsState> {
                                 editors that are currently out there. We have noticed that writing math on a computer is extremely 
                                 difficult. So difficult that most people resort to writing it out on a piece of paper and then scanning 
                                 in there work. On Calchub.co, math looks just as it would on a piece of paper and it's as easy to edit 
-                                as a Microsoft Word document. 
+                                as any other text online. 
                                 <br></br>
                                 <br></br> 
                                 The website is currently live! Check it out 

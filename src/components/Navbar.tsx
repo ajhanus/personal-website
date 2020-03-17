@@ -34,6 +34,7 @@ const NavbarHorizontal = () => {
             <div className="navbar-buttons">
                 <NavbarButton title="Home" destination="/" />
                 <NavbarButton title="Projects" destination="/projects" />
+                <NavbarButton title="Memory" destination="/memory" />
                 <NavbarButtonPDF title="Resume" pdf="resume.pdf" />
             </div>
             <div className="navbar-email">hanusaj@gmail.com</div>
@@ -75,6 +76,7 @@ class NavbarVertical extends React.Component<{},iNavbarVerticalState> {
                     <div className="navbar-buttons">
                         <NavbarButton title="Home" destination="/" />
                         <NavbarButton title="Projects" destination="/projects" />
+                        <NavbarButton title="Memory" destination="/memory" />
                         <NavbarButtonPDF title="Resume" pdf="resume.pdf" />
                     </div>
                 </div>
