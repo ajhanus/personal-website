@@ -90,7 +90,6 @@ class NavbarVertical extends React.Component<{},iNavbarVerticalState> {
                 <div className={"name-info-container" + userActive}>
                     <div className="name-info">
                         <div>hanusaj@gmail.com</div>
-                        <div>(641) 355 - 3039</div>
                     </div>
                 </div>
                 <div className={"navbar-buttons-container" + navActive}>

@@ -170,9 +170,9 @@ a {
     color: $primaryColor0;
 }
 
-.profile-header {
+.profile-header-hori {
     display: flex;
-    background: url('../images/hk_landscape.jpg');
+    background: rgb(13, 30, 64);
     background-size: cover;
     min-height: 616px;
     color: $secondaryColor;
@@ -190,8 +190,46 @@ a {
 
     .profile-image {
         width: 30vw;
+        margin: auto;
         max-width: 100%;
         max-height: 30vw;
+        
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+
+.profile-header-vert {
+    display: flex;
+    flex-direction: column-reverse;
+    background: rgb(13, 30, 64);
+    background-size: cover;
+    min-height: 616px;
+    color: $secondaryColor;
+
+    .profile-bio {
+        margin: 12vw;
+        padding: 0.67em;
+        background-color: rgba(220, 220, 220, 0.4);
+        font-size: 2em;
+
+        h3 {
+            margin: 0.67em 0.67em;
+        }
+    }
+
+    .profile-image {
+        width: 80vw;
+        margin: 12vw auto;
+        max-width: 100%;
+        max-height: 80vw;
+        
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+        }
     }
 }
 
